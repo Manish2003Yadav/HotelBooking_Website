@@ -1,6 +1,6 @@
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-// import { userColumns, userRows } from "../../datatablesource";
+
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
@@ -41,6 +41,12 @@ const Datatable = ({ columns }) => {
             >
               Delete
             </div>
+            <div
+              className="updateButton"
+              onClick={() => handleDelete(params.row._id)}
+            >
+              Update
+            </div>
           </div>
         );
       },
@@ -57,7 +63,7 @@ const Datatable = ({ columns }) => {
       </div>
       <DataGrid
         className="datagrid"
-        // rows={list}
+
         rows={data}
         columns={columns.concat(actionColumn)}
         pageSize={9}
