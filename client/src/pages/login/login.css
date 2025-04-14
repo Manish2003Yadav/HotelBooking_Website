@@ -4,13 +4,13 @@
   align-items: center;
   justify-content: center;
   background-image: url("https://media.istockphoto.com/id/472899538/photo/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab.jpg?s=612x612&w=0&k=20&c=rz-WSe_6gKfkID6EL9yxCdN_UIMkXUBsr67884j-X9o=");
- background-repeat: no-repeat;
- background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 
- position:absolute;
+  position: absolute;
   width: 100%;
-background-position: center;
-box-sizing: border-box;
+  background-position: center;
+  box-sizing: border-box;
 }
 
 .lContainer {
@@ -23,7 +23,7 @@ box-sizing: border-box;
   height: 30%;
 }
 
-.lInput{
+.lInput {
   border-radius: 10%;
   height: 30px;
   padding: 10px;
@@ -39,8 +39,7 @@ box-sizing: border-box;
   border-radius: 5px;
 }
 
-.lButton:disabled{
+.lButton:disabled {
   background-color: #0071c28c;
   cursor: not-allowed;
 }
-
