@@ -4,42 +4,69 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-image: url("https://source.unsplash.com/1600x900/?hotel,beach,sea,ocean"); /* Updated background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a semi-transparent overlay for better readability */
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
 }
 
 .lContainer {
-  width: 300px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2; /* Ensure it appears above the overlay */
+  width: 350px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
 }
 
 .lInput {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.lInput:focus {
+  border-color: #4caf50;
+  outline: none;
 }
 
 .lButton {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .lButton:hover {
   background-color: #45a049;
+  transform: scale(1.05); /* Add a slight zoom effect */
 }
 
 .lButton:disabled {
@@ -54,11 +81,31 @@ span {
   text-align: center;
 }
 
-/* Logout button specific styling */
-.lButton.logout {
-  background-color: #f44336;
+/* Add animation for the container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.lButton.logout:hover {
-  background-color: #d32f2f;
+/* Add floating animation for the login container */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.lContainer:hover {
+  animation: float 3s infinite; /* Add floating animation on hover */
 }

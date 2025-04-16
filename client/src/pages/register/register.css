@@ -1,47 +1,111 @@
+/* General styling for the register container */
 .register {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    background-image: url("https://img.freepik.com/premium-photo/top-view-office-desk-with-office-tools-computer-laptop-wood-table-background-with-copy-space-generative-ai_3535-4043.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-    position:absolute;
-     width: 100%;
-   background-position: center;
-   box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://source.unsplash.com/1600x900/?register,signup,technology"); /* Updated background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a semi-transparent overlay for better readability */
+.register::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.rContainer {
+  position: relative;
+  z-index: 2; /* Ensure it appears above the overlay */
+  width: 400px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+}
+
+.rInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.rInput:focus {
+  border-color: #0071c2;
+  outline: none;
+}
+
+.rButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rButton:hover {
+  background-color: #005fa3;
+  transform: scale(1.05); /* Add a slight zoom effect */
+}
+
+.rButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Styling for error messages */
+span {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Add animation for the container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .rContainer {
-    border-color: black;
-    border-radius: 5%;
- margin-left: 30%;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-   
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .rInput{
-    border-radius: 5%;
-    height: 30px;
-    padding: 10px;
+}
+
+/* Add floating animation for the register container */
+@keyframes float {
+  0% {
+    transform: translateY(0);
   }
-  
-  .rButton {
-    border: none;
-    padding: 10px 20px;
-    background-color: #0071c2;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .rButton:disabled{
-    background-color: #0071c28c;
-    cursor: not-allowed;
+  100% {
+    transform: translateY(0);
   }
+}
+
+.rContainer:hover {
+  animation: float 3s infinite; /* Add floating animation on hover */
+}
