@@ -1,30 +1,53 @@
-.navbar{
+.navbar {
   height: 50px;
-  background-color: #003580;
-  display: flex;
-  justify-content: center;
-}
-
-.navContainer{
-  width: 100%;
-  max-width: 1024px;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #0071c2;
+  color: white;
+  padding: 0 20px;
 }
 
-.logo{
-  font-weight: 500;
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.navButton{
-  margin-left: 20px;
-  border: none;
-  padding: 5px 10px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
   cursor: pointer;
-  color: #88898a;
+  color: whitesmoke;
 }
-.navButton:hover{
-  background-color: rgb(203, 203, 214);
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navButton {
+  padding: 10px 20px;
+  background-color: white;
+  color: #0071c2;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #005fa3;
+  color: white;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: whitesmoke;
 }

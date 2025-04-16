@@ -1,6 +1,6 @@
 .reserve {
   width: 100vw;
-  height:100vh;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.418);
   position: fixed;
   top: 0;
@@ -9,7 +9,10 @@
   align-items: center;
   justify-content: center;
 }
-
+.reserve span {
+  color: blue;
+  font-size: large;
+}
 .rContainer {
   background-color: white;
   padding: 20px;
@@ -53,7 +56,7 @@
   font-weight: 500;
 }
 
-.rSelectRooms{
+.rSelectRooms {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -61,7 +64,7 @@
   color: gray;
 }
 
-.room{
+.room {
   display: flex;
   flex-direction: column;
 }

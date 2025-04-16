@@ -12,6 +12,7 @@
   flex-direction: column;
   gap: 10px;
   position: relative;
+  color: #555;
 }
 
 .bookNow {
@@ -29,6 +30,7 @@
 
 .hotelTitle {
   font-size: 24px;
+  color: #0071c2;
 }
 
 .hotelAddress {
@@ -36,6 +38,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.hotelAddress > span {
+  font-size: 12px;
+  color: #555;
+}
+.hotelAddress > svg {
+  font-size: 14px;
+  color: #0071c2;
 }
 
 .hotelDistance {
@@ -69,7 +79,6 @@
   justify-content: space-between;
   gap: 20px;
   margin-top: 20px;
-
 }
 
 .hotelDetailsTexts {
@@ -79,9 +88,8 @@
 .hotelDesc {
   font-size: 14px;
   margin-top: 20px;
-  margin-right: 200PX;
+  margin-right: 200px;
 }
-
 
 .hotelDetailsPrice {
   flex: 1;
@@ -98,6 +106,7 @@
 }
 .hotelDetailsPrice > span {
   font-size: 14px;
+  color: #555;
 }
 .hotelDetailsPrice > h2 {
   font-weight: 300;
@@ -112,7 +121,7 @@
   border-radius: 5px;
 }
 
-.slider{
+.slider {
   position: sticky;
   top: 0;
   left: 0;
@@ -124,7 +133,7 @@
   align-items: center;
 }
 
-.sliderWrapper{
+.sliderWrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -132,12 +141,12 @@
   align-items: center;
 }
 
-.sliderImg{
+.sliderImg {
   width: 80%;
   height: 80vh;
 }
 
-.close{
+.close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -146,7 +155,7 @@
   cursor: pointer;
 }
 
-.arrow{
+.arrow {
   margin: 20px;
   font-size: 50px;
   color: lightgray;

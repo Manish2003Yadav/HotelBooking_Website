@@ -1,45 +1,64 @@
+/* General styling for the login container */
 .login {
-  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-image: url("https://media.istockphoto.com/id/472899538/photo/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab.jpg?s=612x612&w=0&k=20&c=rz-WSe_6gKfkID6EL9yxCdN_UIMkXUBsr67884j-X9o=");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  position: absolute;
-  width: 100%;
-  background-position: center;
-  box-sizing: border-box;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
 }
 
 .lContainer {
-  border-color: aqua;
-  border-width: 10%;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 20%;
-  height: 30%;
+  gap: 15px;
 }
 
 .lInput {
-  border-radius: 10%;
-  height: 30px;
+  width: 100%;
   padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .lButton {
-  border: none;
-  padding: 10px 20px;
-  background-color: #0071c2;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
+  border: none;
   border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lButton:hover {
+  background-color: #45a049;
 }
 
 .lButton:disabled {
-  background-color: #0071c28c;
+  background-color: #ccc;
   cursor: not-allowed;
+}
+
+/* Styling for error messages */
+span {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Logout button specific styling */
+.lButton.logout {
+  background-color: #f44336;
+}
+
+.lButton.logout:hover {
+  background-color: #d32f2f;
 }

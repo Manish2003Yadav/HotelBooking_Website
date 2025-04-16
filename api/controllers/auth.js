@@ -47,3 +47,13 @@ export const login = async (req, res, next) => {
     next(err);
   }
 };
+export const logout = (req, res) => {
+  res
+    .clearCookie("access_token", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production", // Ensures secure cookies in production
+      sameSite: "strict", // Prevents CSRF attacks
+    })
+    .status(200)
+    .json({ message: "Logged out successfully." });
+};
