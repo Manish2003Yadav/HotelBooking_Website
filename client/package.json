@@ -44,5 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001/api"
+  "proxy": "https://hotelbooking-website-2.onrender.com"
 }
